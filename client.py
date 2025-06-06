@@ -45,7 +45,7 @@ class Client:
             self.confg = response.text
     
     def activate_ssh(self):
-        self.config.replace("sshd.status=enabled", "sshd.status=disabled", 1)
+        self.config.replace("sshd.status=disabled", "sshd.status=enabled", 1)
 
     def write_config(self):
         url = urljoin(self.base_url, endpoints["writeCfgUrl"])
